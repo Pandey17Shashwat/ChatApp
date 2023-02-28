@@ -1,0 +1,30 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
+import 'package:flutter/material.dart';
+
+class TermsAndConditions extends StatelessWidget {
+  const TermsAndConditions({Key? key,this.onPressed}) : super(key: key);
+
+  final onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoButton(
+      onPressed: onPressed,
+      child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Color.fromARGB(255, 95, 8, 2)),
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 15),
+            child: Text(
+              "Terms and Conditions",
+              style: TextStyle(color: Colors.black45.withOpacity(0.9)),
+            ),
+          )),
+    );
+  }
+}
